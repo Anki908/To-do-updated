@@ -21,7 +21,7 @@ const SecondaryContainer = () => {
   // }
 
   const HandleToggle = (inf) => {
-     //dispatch(updateData(inf));
+     dispatch(updateData(inf));
   }
 
   return (
@@ -30,8 +30,8 @@ const SecondaryContainer = () => {
         {
            info.data.map((inf , id) => (
             <div key = {id} className= "flex ml-32 mt-8  h-10 mr-32 rounded-md pl-2">
-              <li className="font-bold pt-2 rounded-md">{id+1}. {inf}</li>
-              <button onClick={() => HandleToggle(inf)} className='ml-4 pl-1 pr-1 bg-green-600 rounded-lg text-white'>Completed</button>
+              <li className="font-bold pt-2 rounded-md text-2xl">{id+1}. {inf}</li>
+              <button onClick={() => HandleToggle(id)} className='ml-4 pl-1 pr-1 bg-green-600 rounded-lg text-white'>Completed</button>
               <button onClick={() => HandleDelete(inf)} className = 'ml-4 pl-1 pr-1 bg-red-700 rounded-lg text-white'> Remove </button>
             </div>
           ))

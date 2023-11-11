@@ -4,7 +4,7 @@ import SecondaryContainer from './SecondaryContainer'
 
 const MainContainer = () => {
   return (
-    <div className='h-screen bg-slate-400'>
+    <div className=' min-h-screen max-h-auto  bg-slate-400'>
       <div className=''>
          <PrimaryContainer/>
       </div>
